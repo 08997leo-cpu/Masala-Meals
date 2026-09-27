@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masala Meals | Homemade Goodness Everyday</title>
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-burgundy: #7a2228;
+            --accent-gold: #c29339;
+            --bg-cream: #fbf8f3;
+            --card-bg: #ffffff;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            padding: 20px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 24px;
+        }
+
+        .logo-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid var(--accent-gold);
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--secondary-burgundy);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: var(--secondary-burgundy);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: var(--primary-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .location-tag {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            margin-bottom: 24px;
+            transition: transform 0.2s;
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--secondary-burgundy);
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40%;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin: 4px auto 0;
+        }
+
+        .plans-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .plan-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-green);
+            text-align: left;
+            position: relative;
+        }
+
+        .plan-card.signature {
+            border-top-color: var(--secondary-burgundy);
+        }
+
+        .plan-card.premium {
+            border-top-color: var(--accent-gold);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-burgundy);
+            color: white;
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .plan-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .plan-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--secondary-burgundy);
+        }
+
+        .plan-price span {
+            font-size: 12px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .plan-features {
+            list-style: none;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .plan-features li::before {
+            content: "✓ ";
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .trial-banner {
+            background: linear-gradient(135deg, var(--secondary-burgundy), #9e2a32);
+            color: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .trial-banner h3 {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .trial-banner p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo-circle">MM</div>
+        <h1>MASALA MEALS</h1>
+        <div class="tagline">Homemade Goodness Everyday</div>
+        <div class="location-tag">📍 Windsor, ON</div>
+    </div>
+
+    <!-- Quick Order Button -->
+    <a href="https://wa.me/14376165513?text=Hi!%20I'd%20like%20to%20order%20from%20Masala%20Meals." class="btn-whatsapp" target="_blank">
+        💬 Order via WhatsApp
+    </a>
+
+    <!-- One Day Trial -->
+    <div class="trial-banner">
+        <h3>One-Day Trial Available</h3>
+        <p>Try our freshly prepared, home-style meal before committing! ❤️</p>
+    </div>
+
+    <!-- Monthly Plans -->
+    <h2 class="section-title">Monthly Tiffin Plans</h2>
+
+    <div class="plans-grid">
+        <!-- Classic Plan -->
+        <div class="plan-card">
+            <div class="plan-header">
+                <div class="plan-name">Classic</div>
+                <div class="plan-price">$190 <span>/mo</span></div>
+            </div>
+            <ul class="plan-features">
+                <li>4 Rotis</li>
+                <li>2 Sabjis (12 oz each)</li>
+                <li>Freshly Prepared & Delivered</li>
+            </ul>
+        </div>
+
+        <!-- Signature Plan -->
+        <div class="plan-card signature">
+            <span class="badge">Popular</span>
+            <div class="plan-header">
+                <div class="plan-name">Signature</div>
+                <div class="plan-price">$220 <span>/mo</span></div>
+            </div>
+            <ul class="plan-features">
+                <li>6 Rotis + 2 Sabjis (12 oz each)</li>
+                <li><strong>OR</strong> 4 Rotis + Rice (1 serving) + 2 Sabjis</li>
+                <li>Dahi / Raita (On selected days)</li>
+            </ul>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan-card premium">
+            <div class="plan-header">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">$240 <span>/mo</span></div>
+            </div>
+            <ul class="plan-features">
+                <li>8 Rotis</li>
+                <li>Rice (1 serving)</li>
+                <li>2 Sabjis (12 oz each)</li>
+                <li>Surprise Sweets (Once a week) 🧁</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Secondary Order Link -->
+    <a href="https://wa.me/14376165513?text=Hi!%20I%20have%20a%20question%20about%20your%20tiffin%20plans." class="btn-whatsapp" style="background-color: var(--primary-green);" target="_blank">
+        📞 Contact & Inquiries
+    </a>
+
+    <div class="footer">
+        <p>Good Food • Brighter Days ❤️</p>
+    </div>
+</div>
+
+</body>
+</html>
